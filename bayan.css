@@ -32,15 +32,6 @@ h2 {
   color: black;
 }
 
-/* .container:hover .header:after {
-  content: url(img/123.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 25%;
-  right: 15px;
-  rotate: 45deg;
-} */
-
 img {
   cursor: pointer;
   display: block;
@@ -116,4 +107,28 @@ img {
 
 .bayan:hover .bayan-img {
   display: block;
+}
+
+/* media */
+
+@media all and (max-width: 1222px) {
+  .container {
+    width: 820px;
+  }
+}
+
+@media all and (max-width: 820px) {
+  .container {
+    width: 320px;
+    padding: 10px;
+  }
+  .img1 img {
+    width: 255px;
+  }
+  .bayan-img img {
+    width: 255px;
+  }
+  .krest {
+    top: 8px;
+  }
 }

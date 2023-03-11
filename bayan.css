@@ -16,7 +16,7 @@
 .bayan {
   border: none;
   border-top: 1px solid red;
-  /* margin-top: 10px; */
+  position: relative;
 }
 
 h1 {
@@ -25,12 +25,54 @@ h1 {
 
 h2 {
   margin-top: 10px;
+  color: blue;
 }
 
+.container:hover h2 {
+  color: black;
+}
+
+/* .container:hover .header:after {
+  content: url(img/123.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 25%;
+  right: 15px;
+  rotate: 45deg;
+} */
+
 img {
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
+  animation-name: Appearance;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+.krest {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  rotate: 45deg;
+  display: none;
+}
+
+.krest1 {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  display: none;
+}
+
+@keyframes Appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .bayan-img {
@@ -43,6 +85,35 @@ img {
   position: relative;
 }
 
+.input {
+  appearance: none;
+}
+
 .input:checked + .bayan-img {
+  display: block;
+}
+
+.input:checked + .img1 {
+  display: none;
+}
+
+.container:hover .krest {
+  display: block;
+  rotate: 45deg;
+}
+
+.container:hover .krest1 {
+  display: block;
+}
+
+.input:checked ~ .krest img {
+  rotate: 45deg;
+}
+
+.input:checked ~ .krest1 img {
+  rotate: 45deg;
+}
+
+.bayan:hover .bayan-img {
   display: block;
 }
